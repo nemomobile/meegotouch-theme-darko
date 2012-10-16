@@ -4,7 +4,7 @@ Name=Darko
 Encoding=UTF-8
 
 [X-MeeGoTouch-Metatheme]
-X-Inherits=base
+X-Inherits=nemo-default
 X-Icon = "icon-l-meegotouchtheme-darko"
 X-Visible=true
 X-Libraries=meegotouchviews
