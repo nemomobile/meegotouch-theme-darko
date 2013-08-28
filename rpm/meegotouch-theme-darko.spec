@@ -54,6 +54,12 @@ install -m 644 sounds/darko/stereo/* %{buildroot}/usr/share/sounds/darko/stereo/
 
 %fdupes  %{buildroot}%{_datadir}
 
+%post
+Config_Src=`/usr/bin/gconftool-2 --get-default-source`
+# Set/Override current theme name
+/usr/bin/gconftool-2 --direct --config-source $Config_Src \
+-s -t string /meegotouch/theme/name darko
+
 
 %files
 %defattr(-,root,root,-)
