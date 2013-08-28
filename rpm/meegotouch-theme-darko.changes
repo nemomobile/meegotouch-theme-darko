@@ -1,0 +1,109 @@
+* Tue Aug 13 2013 Simonas Leleiva <simonas.leleiva@gmail.com> - 0.3.6
+- move all graphics under icons/
+
+* Tue Oct 16 2012 Denis Zalevskiy <denis.zalevskiy@jollamobile.com> - 0.3.5
+- requires nemo-theme-default
+
+* Mon Oct 01 2012 John Brooks <john.brooks@dereferenced.net> - 0.3.5
+- Merge blanco folder into darko at install time
+  This hack shouldn't be necessary anymore.
+
+* Thu Feb 16 2012 Jakub Pavelek <jpavelek@live.com> - 0.3.5
+- Fixes NEMO#136: Wrong icon addressed to File Muncher
+- lighter dialog and thumbnail close icons
+
+* Thu Feb 16 2012 Jakub Pavelek <jpavelek@live.com> - 0.3.4
+- Fixes NEMO#117: Missing icons for file manager
+- added icon-m-common-directory and icon-m-content-document
+- Fixes NEMO#116: Missing application icons for App manager
+- added to Blanco flickr and video icons, already in Darko
+
+* Thu Jan 12 2012 Jakub Pavelek <jpavelek@live.com> - 0.3.3
+- Added toolbar app icon that formeego.apps client needs
+- Added favorite small and toolbar icons
+- Added toolbar app and edit icons
+- Added incoming call mid icon
+- Added start-up logo (temporary)
+- Fixes NEMO#72: Missing graphics for startup/shutdown
+- Added small remove icons
+
+* Mon Jan 02 2012 Jakub Pavelek <jpavelek@live.com> - 0.3.2
+- Added graphics for new Terminal app
+- Added inverted tab-bar graphics (portrait)
+- Fixed inverted view menu
+- inverted single item menu
+- Added product 2D barcode for About applet
+
+* Mon Dec 26 2011 Jakub Pavelek <jpavelek@live.com> - 0.3.1
+- Added inverted app backgrounds, sliders, spinners
+- made inverted BG for menu bigger to workaround a Components bug
+
+* Wed Dec 21 2011 Jakub Pavelek <jpavelek@live.com> - 0.3.0
+- Added missing sounds, copy from CE for now
+- Fixes NEMO#47 - Darko does not include sounds
+
+* Mon Dec 19 2011 Jakub Pavelek <jpavelek@live.com> - 0.3.0
+- Inverted simple button, horizontal and vert groups
+- Inverted switch, radio button and checkbox
+- Fixing some missing bits from base theme
+- Inverted view menu and progress indicators
+
+* Sun Dec 18 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.12
+- Default app icon
+- no icon cache invocation packaging change
+- green instead of blue
+- new checkbox, radio button, slider and others
+
+* Wed Dec 07 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.11
+- Added icons for stock apps
+
+* Wed Nov 23 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.10
+- Fixed horizontal position indicator
+- icon-m-input-clear
+- Most selected and some inverted buttons
+- normal buttons for horizontal grouping
+
+* Fri Nov 18 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.9
+- icon-m-toolbar-reply and most text edit assets
+
+* Thu Nov 17 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.8
+- Few more icons for irc-chatter, dialog buttons.
+
+* Thu Nov 17 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.7
+- Panel backgrounds, normal and inverted Switch, MAD icon
+
+* Thu Nov 17 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.6
+- Fast scroll additions and common add icon
+
+* Mon Nov 14 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.5
+- Theming for QtComponents - tabs, radio button
+
+* Sat Nov 12 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.4
+- Different Close button for switcher, clipping in switcher changed.
+- Switcher thumbnail new icon and bold text
+
+* Wed Nov 09 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.3
+- Added spinners of all sizes (24, 32 and also 64) in addition
+
+* Wed Nov 09 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.2
+- Added more graphics for QtComponents - now Flicrk and Maps work just fine.
+
+* Fri Oct 14 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.1
+- Enough of QtComponents graphics to run Maps and main page of QmlComponentsGallery. Releasing.
+
+* Thu Oct 13 2011 Jakub Pavelek <jpavelek@live.com> - 0.2.0
+- Started to haxor graphics for QtComponents into blanco dir. Ugly :(
+
+* Wed Oct 05 2011 Jakub Pavelek <jpavelek@live.com> - 0.1.2
+- Preview and backgrounds
+
+* Mon Sep 26 2011 Miroslav Safr <miroslav.safr@tieto.com.com> - 0.0.2
+- added yaml and changed theme inharitance to n900de where we have many fixes
+
+* Mon Sep 26 2011 Miroslav Safr <miroslav.safr@tieto.com.com> - 0.0.1
+- meego packaging meegotouch-theme-darko
+
+* Sat Sep 24 2011 Jakub Pavelek <jpavelek@live.com> - 0.1
+- first RPM packaging release
+
+
