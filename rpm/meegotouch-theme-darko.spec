@@ -1,4 +1,8 @@
 Name:       meegotouch-theme-darko
+# >> macros
+%define theme_name darko
+# << macros
+
 Summary:    Darko is a theme for MeeGo Handset/Nemo
 Version:    0.3.5
 Release:    3
@@ -13,9 +17,9 @@ BuildRequires: fdupes
 %description
 Darko is a theme for MeeGo Handset/Nemo.
 
-%define theme_dir %{buildroot}%{_datadir}/themes/darko
-%define graphics_dir %{buildroot}%{_datadir}/themes/darko/meegotouch
-%define package_dir %{_datadir}/themes/darko
+%define theme_dir %{buildroot}%{_datadir}/themes/%{theme_name}
+%define graphics_dir %{buildroot}%{_datadir}/themes/%{theme_name}/meegotouch
+%define package_dir %{_datadir}/themes/%{theme_name}
 
 %define base_theme base
 %define base_theme_dir %{buildroot}%{_datadir}/themes/%{base_theme}
@@ -49,21 +53,27 @@ install -m 644 meegotouch/meegotouchhome/style/meegotouchhome.css %{graphics_dir
 mkdir -p %{base_theme_dir}/meegotouch/icons
 install -m 644 meegotouch/icons/icon-l-meegotouchtheme-darko.png %{base_theme_dir}/meegotouch/icons/
 
-mkdir -p %{buildroot}/usr/share/sounds/darko/stereo
-install -m 644 sounds/darko/stereo/* %{buildroot}/usr/share/sounds/darko/stereo/
+mkdir -p %{buildroot}/usr/share/sounds/%{theme_name}/stereo
+install -m 644 sounds/%{theme_name}/stereo/* %{buildroot}/usr/share/sounds/%{theme_name}/stereo/
 
 %fdupes  %{buildroot}%{_datadir}
 
 %post
+Theme_Key="/meegotouch/theme/name"
 Config_Src=`/usr/bin/gconftool-2 --get-default-source`
-# Set/Override current theme name
-/usr/bin/gconftool-2 --direct --config-source $Config_Src \
--s -t string /meegotouch/theme/name darko
 
+Theme_Name=`/usr/bin/gconftool-2 --direct --config-source $Config_Src \
+            -g $Theme_Key`
+
+if [ -z "$Theme_Name" ]; then
+    echo "Setting theme name to %{theme_name}"
+    /usr/bin/gconftool-2 --direct --config-source $Config_Src \
+    -s -t string $Theme_Key %{theme_name}
+fi
 
 %files
 %defattr(-,root,root,-)
 %{package_dir}/*
 %{base_package_dir}/meegotouch/icons/icon-l-meegotouchtheme-darko.png
-%{_datadir}/sounds/darko/stereo/*
+%{_datadir}/sounds/%{theme_name}/stereo/*
 
